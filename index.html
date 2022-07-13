@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <form class="search-form">
+          <div class="row">
+            <div class="col-6">
+              <form id="cidade-form">
+                <input
+                  type="cidade"
+                  id="search-text"
+                  placeholder="Troque a cidade"
+                  required
+                />
+                <input type="submit" value="Search" />
+              </form>
+            </div>
+          </div>
+        </form>
+        <div class="col-3">
+          <button class="btn btn-success w-100" id="current-location-button">
+            Current
+          </button>
+        </div>
+        <h1 id="cidade">
+          Sydney NSW, Australia
+        </h1>
+        <ul>
+          <li id="date_time">
+            Wednesday 22:00
+          </li>
+          <li>
+            <span id="w-description">How's the weather?</span>
+          </li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature">19</span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>
+                Precipitation: 0%
+              </li>
+              <li>Humidity: <span id="humidity">76</span>%</li>
+              <li>Wind: <span id="wind">8</span>km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
